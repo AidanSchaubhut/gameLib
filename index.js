@@ -1,11 +1,20 @@
 (function(window, _) {
   window.gamz = window.gamz || {
-    numz: {getDistance(pointA, pointB){
+    numz: {
+        getDistance(pointA, pointB){
         const
         distanceX = pointB.x - pointA.x,
         distanceY = pointB.y - pointA.y;
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-      },
+        },
+
+        degreesToRadians(degrees){
+            return degrees * Math.PI / 180;
+        },
+        radiansToDegrees(radians){
+            return radians * 180 /Math.PI;
+        },
+      
 },
     phyz: {
       /**
